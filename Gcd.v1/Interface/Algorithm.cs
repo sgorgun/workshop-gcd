@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Gcd
+namespace Gcd.v1.Interface
 {
     internal abstract class Algorithm
     {

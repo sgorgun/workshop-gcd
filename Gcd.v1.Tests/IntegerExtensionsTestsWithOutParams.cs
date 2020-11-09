@@ -1,6 +1,6 @@
 ﻿using System;
 using NUnit.Framework;
-using static Gcd.GcdAlgorithms;
+using static Gcd.v1.StaticClasses.GcdAlgorithms;
 
 #pragma warning disable CA1707
 #pragma warning disable SA1600

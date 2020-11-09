@@ -1,10 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gcd.1", "Gcd.1\Gcd.1.csproj", "{293D1E32-0410-42FE-92F1-D9F617DE6BF6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gcd.v1", "Gcd.v1\Gcd.v1.csproj", "{293D1E32-0410-42FE-92F1-D9F617DE6BF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gcd.2", "Gcd.2\Gcd.2.csproj", "{BE353E90-4DF6-4AFF-87E4-A60C318D89BD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gcd.v2", "Gcd.v2\Gcd.v2.csproj", "{BE353E90-4DF6-4AFF-87E4-A60C318D89BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gcd.3", "Gcd.3\Gcd.3.csproj", "{72E9F717-B7A4-45FB-BA30-AC82D2581577}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gcd.v3", "Gcd.v3\Gcd.v3.csproj", "{72E9F717-B7A4-45FB-BA30-AC82D2581577}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{F4E94B44-9126-4609-A291-BA5AD32C0A25}"
 ProjectSection(SolutionItems) = preProject

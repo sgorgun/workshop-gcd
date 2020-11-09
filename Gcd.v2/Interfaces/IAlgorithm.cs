@@ -1,4 +1,4 @@
-﻿namespace Gcd._2.Interfaces
+﻿namespace Gcd.v2.Interfaces
 {
     public interface IAlgorithm
     {

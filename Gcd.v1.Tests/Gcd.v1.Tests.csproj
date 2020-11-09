@@ -24,6 +24,6 @@
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
     </ItemGroup>
     <ItemGroup>
-      <ProjectReference Include="..\Gcd.1\Gcd.1.csproj" />
+      <ProjectReference Include="..\Gcd.v1\Gcd.v1.csproj" />
     </ItemGroup>
 </Project>

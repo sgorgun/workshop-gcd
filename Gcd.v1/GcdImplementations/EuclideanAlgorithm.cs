@@ -1,6 +1,7 @@
 ﻿using System;
+using Gcd.v1.Interface;
 
-namespace Gcd
+namespace Gcd.v1.GcdImplementations
 {
     internal class EuclideanAlgorithm : Algorithm
     {
