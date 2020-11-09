@@ -1,8 +1,8 @@
 using System;
-using Gcd.v1.GcdImplementations;
-using Gcd.v1.Interface;
+using Gcd.GcdImplementations;
+using Gcd.Interface;
 
-namespace Gcd.v1.StaticClasses
+namespace Gcd.StaticClasses
 {
     public static class GcdAlgorithms
     {

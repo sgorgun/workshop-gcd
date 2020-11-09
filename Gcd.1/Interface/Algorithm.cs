@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Gcd.v1.Interface
+namespace Gcd.Interface
 {
     internal abstract class Algorithm
     {
@@ -13,7 +13,7 @@ namespace Gcd.v1.Interface
         {
             throw new NotImplementedException();
         }
-	
+        
         protected abstract int Func(int first, int second);
     }
 }

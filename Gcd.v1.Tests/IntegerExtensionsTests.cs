@@ -1,11 +1,11 @@
 ﻿using System;
 using NUnit.Framework;
-using static Gcd.v1.StaticClasses.GcdAlgorithms;
+using static Gcd.StaticClasses.GcdAlgorithms;
 
 #pragma warning disable CA1707
 #pragma warning disable SA1600
 
-namespace Gcd.v1.Tests
+namespace Gcd.Tests
 {
     public class IntegerExtensionsTests
     {

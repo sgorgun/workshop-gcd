@@ -1,6 +1,6 @@
-using Gcd.v2.Interfaces;
+using Gcd.Interfaces;
 
-namespace Gcd.v2.GcdImplementations
+namespace Gcd.GcdImplementations
 {
     public class EuclideanAlgorithm : IAlgorithm
     {
