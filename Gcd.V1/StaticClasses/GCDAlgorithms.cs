@@ -1,8 +1,8 @@
 using System;
-using Gcd.v1.GcdImplementations;
-using Gcd.v1.Interface;
+using Gcd.V1.GcdImplementations;
+using Gcd.V1.Interface;
 
-namespace Gcd.StaticClasses
+namespace Gcd.V1.StaticClasses
 {
     /// <summary>
     /// Provide methods to calculates GCD.
@@ -169,7 +169,6 @@ namespace Gcd.StaticClasses
         private static int Gcd(Algorithm algorithm, int first, int second, params int[] numbers) =>
             throw new NotImplementedException();
 
-        private static int Gcd(Algorithm algorithm, out long milliseconds, int first, int second,
-            params int[] numbers) => throw new NotImplementedException();
+        private static int Gcd(Algorithm algorithm, out long milliseconds, int first, int second, params int[] numbers) => throw new NotImplementedException();
     }
 }

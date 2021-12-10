@@ -1,13 +1,10 @@
 ﻿using System;
 using NUnit.Framework;
-using static Gcd.v3.StaticClasses.GcdAlgorithms;
+using static Gcd.V2.StaticClasses.GcdAlgorithms;
 
-#pragma warning disable CA1707
-#pragma warning disable SA1600
-
-namespace Gcd.Tests
+namespace Gcd.Tests.Gcd.V2
 {
-    public class IntegerExtensionsTestsV3
+    public class IntegerExtensionsTestsV2
     {
         [TestCase(30, 12, ExpectedResult = 6)]
         [TestCase(2672, 5678, ExpectedResult = 334)]

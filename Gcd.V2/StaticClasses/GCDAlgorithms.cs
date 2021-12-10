@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Gcd.v3.StaticClasses
+namespace Gcd.V2.StaticClasses
 {
     /// <summary>
     /// Provide methods to calculates GCD.

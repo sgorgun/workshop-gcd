@@ -3,6 +3,7 @@
         <TargetFramework>netcoreapp3.1</TargetFramework>
         <CodeAnalysisRuleSet>..\code-analysis.ruleset</CodeAnalysisRuleSet>
         <GenerateDocumentationFile>false</GenerateDocumentationFile>
+        <NoWarn>CA1707,SA1600</NoWarn>
     </PropertyGroup>
     <ItemGroup>
         <AdditionalFiles Include="..\code-analysis.ruleset" Link="Properties\code-analisys.ruleset" />
@@ -24,8 +25,8 @@
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
     </ItemGroup>
     <ItemGroup>
-      <ProjectReference Include="..\Gcd.v1\Gcd.v1.csproj" />
-      <ProjectReference Include="..\Gcd.v2\Gcd.v2.csproj" />
-      <ProjectReference Include="..\Gcd.v3\Gcd.v3.csproj" />
+      <ProjectReference Include="..\Gcd.V1\Gcd.V1.csproj" />
+      <ProjectReference Include="..\Gcd.V2\Gcd.V2.csproj" />
+      <ProjectReference Include="..\Gcd.V3\Gcd.V3.csproj" />
     </ItemGroup>
 </Project>

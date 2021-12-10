@@ -1,4 +1,4 @@
-﻿namespace Gcd.v2.Interfaces
+﻿namespace Gcd.V2.Interfaces
 {
     /// <summary>
     /// Calculates the GCD of integers [-int.MaxValue;int.MaxValue].

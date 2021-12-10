@@ -1,7 +1,7 @@
 ﻿using System;
-using Gcd.v2.Interfaces;
+using Gcd.V3.Interfaces;
 
-namespace Gcd.v2.GcdImplementations
+namespace Gcd.V3.GcdImplementations
 {
     /// <inheritdoc/>
     internal class SteinAlgorithm : IAlgorithm

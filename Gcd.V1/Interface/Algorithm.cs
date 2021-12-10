@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Gcd.v1.Interface
+namespace Gcd.V1.Interface
 {
     /// <summary>
     /// Provide methods to calculates GCD.

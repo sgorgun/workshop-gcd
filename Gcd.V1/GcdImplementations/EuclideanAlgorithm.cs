@@ -1,7 +1,7 @@
 ﻿using System;
-using Gcd.v1.Interface;
+using Gcd.V1.Interface;
 
-namespace Gcd.v1.GcdImplementations
+namespace Gcd.V1.GcdImplementations
 {
     /// <summary>
     /// Calculates the GCD by the Euclidean algorithm.

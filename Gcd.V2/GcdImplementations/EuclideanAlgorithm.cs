@@ -1,7 +1,7 @@
 ﻿using System;
-using Gcd.v2.Interfaces;
+using Gcd.V2.Interfaces;
 
-namespace Gcd.v2.GcdImplementations
+namespace Gcd.V2.GcdImplementations
 {
     /// <inheritdoc/>
     internal class EuclideanAlgorithm : IAlgorithm

@@ -1,10 +1,10 @@
 ﻿using System;
-using Gcd.v3.Interfaces;
+using Gcd.V2.Interfaces;
 
-namespace Gcd.v3.GcdImplementations
+namespace Gcd.V2.GcdImplementations
 {
     /// <inheritdoc/>
-    internal class EuclideanAlgorithm : IAlgorithm
+    internal class SteinAlgorithm : IAlgorithm
     {
         /// <inheritdoc/>
         /// <exception cref="ArgumentException">Thrown when all numbers are 0 at the same time.</exception>
