@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Gcd.Version._2;
 
-namespace Gcd.Version._2
+namespace Gcd.Version._3
 {
     /// <summary>
     /// Metods for calculating GCD.
@@ -38,10 +37,13 @@ namespace Gcd.Version._2
         public int Calculate(int first, int second, out long milliseconds)
         {
             (first, second) = GetResult(first, second);
+
             var watch = new System.Diagnostics.Stopwatch();
             watch.Start();
+
             var result = this.BaseAlgorithm(first, second);
             watch.Stop();
+
             milliseconds = watch.ElapsedMilliseconds;
             return result;
         }

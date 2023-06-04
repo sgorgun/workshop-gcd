@@ -1,4 +1,6 @@
-﻿namespace Gcd.Version._3
+﻿using Gcd.Version._3.Extensions;
+
+namespace Gcd.Version._3
 {
     /// <summary>
     /// Calculates the GCD of integers [-int.MaxValue;int.MaxValue].

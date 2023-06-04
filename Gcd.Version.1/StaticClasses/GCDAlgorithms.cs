@@ -193,29 +193,16 @@ namespace Gcd.Version._1
 
         private static int Gcd(Algorithm algorithm, out long milliseconds, int first, int second, params int[] numbers)
         {
-            if (numbers.Length == 0)
-            {
-                return algorithm.Calculate(first, second, out milliseconds);
-            }
+            int gcd = second;
+            milliseconds = 0;
 
-            int gcd;
-
-            if (first == 0)
+            for (var i = 0; i < numbers.Length; i++)
             {
-                gcd = algorithm.Calculate(second, numbers[0], out milliseconds);
-            }
-            else
-            {
-                gcd = algorithm.Calculate(algorithm.Calculate(first, second, out var timer), numbers[0], out milliseconds);
+                gcd = algorithm.Calculate(gcd, numbers[i], out var timer);
                 milliseconds += timer;
             }
 
-            for (var i = 1; i < numbers.Length; i++)
-            {
-                gcd = algorithm.Calculate(gcd, numbers[i], out milliseconds);
-            }
-
-            return gcd;
+            return algorithm.Calculate(first, gcd, out milliseconds);
         }
     }
 }

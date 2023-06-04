@@ -4,7 +4,7 @@ using System.Diagnostics;
 namespace Gcd.Version._2.Extensions
 {
     /// <summary>
-    /// Epxtension methods for algorithms.
+    /// Extension methods for algorithms.
     /// </summary>
     internal static class AlgorithmExtension
     {
