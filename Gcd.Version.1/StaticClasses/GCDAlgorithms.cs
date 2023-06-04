@@ -206,13 +206,13 @@ namespace Gcd.Version._1
             }
             else
             {
-                gcd = algorithm.Calculate(algorithm.Calculate(first, second, out milliseconds), numbers[0], out milliseconds);
+                gcd = algorithm.Calculate(algorithm.Calculate(first, second, out var timer), numbers[0], out milliseconds);
+                milliseconds += timer;
             }
 
             for (var i = 1; i < numbers.Length; i++)
             {
-                gcd = algorithm.Calculate(gcd, numbers[i], out var timer);
-                milliseconds += timer;
+                gcd = algorithm.Calculate(gcd, numbers[i], out milliseconds);
             }
 
             return gcd;
