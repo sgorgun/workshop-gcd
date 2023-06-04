@@ -1,4 +1,5 @@
-using System;
+﻿using System;
+using System.Security.AccessControl;
 
 namespace Gcd.Version._1
 {
@@ -159,14 +160,62 @@ namespace Gcd.Version._1
             algorithm.Calculate(first, second, out milliseconds);
 
         private static int Gcd(Algorithm algorithm, int first, int second, int third) =>
-            throw new NotImplementedException();
+            first == 0 ? algorithm.Calculate(second, third) : algorithm.Calculate(algorithm.Calculate(first, second), third);
 
-        private static int Gcd(Algorithm algorithm, out long milliseconds, int first, int second, int third) =>
-            throw new NotImplementedException();
+        private static int Gcd(Algorithm algorithm, out long milliseconds, int first, int second, int third)
+        {
+            if (first == 0)
+            {
+                return algorithm.Calculate(second, third, out milliseconds);
+            }
 
-        private static int Gcd(Algorithm algorithm, int first, int second, params int[] numbers) =>
-            throw new NotImplementedException();
+            var firstSecondGcd = algorithm.Calculate(first, second, out var firstSecondMilliseconds);
+            var firstSecondThirdGcd = algorithm.Calculate(firstSecondGcd, third, out var firstSecondThirdMilliseconds);
+            milliseconds = firstSecondMilliseconds + firstSecondThirdMilliseconds;
+            return firstSecondThirdGcd;
+        }
 
-        private static int Gcd(Algorithm algorithm, out long milliseconds, int first, int second, params int[] numbers) => throw new NotImplementedException();
+        private static int Gcd(Algorithm algorithm, int first, int second, params int[] numbers)
+        {
+            if (numbers.Length == 0)
+            {
+                return algorithm.Calculate(first, second);
+            }
+
+            var gcd = first == 0 ? algorithm.Calculate(second, numbers[0]) : algorithm.Calculate(algorithm.Calculate(first, second), numbers[0]);
+            for (var i = 1; i < numbers.Length; i++)
+            {
+                gcd = algorithm.Calculate(gcd, numbers[i]);
+            }
+
+            return gcd;
+        }
+
+        private static int Gcd(Algorithm algorithm, out long milliseconds, int first, int second, params int[] numbers)
+        {
+            if (numbers.Length == 0)
+            {
+                return algorithm.Calculate(first, second, out milliseconds);
+            }
+
+            int gcd;
+
+            if (first == 0)
+            {
+                gcd = algorithm.Calculate(second, numbers[0], out milliseconds);
+            }
+            else
+            {
+                gcd = algorithm.Calculate(algorithm.Calculate(first, second, out milliseconds), numbers[0], out milliseconds);
+            }
+
+            for (var i = 1; i < numbers.Length; i++)
+            {
+                gcd = algorithm.Calculate(gcd, numbers[i], out var timer);
+                milliseconds += timer;
+            }
+
+            return gcd;
+        }
     }
 }

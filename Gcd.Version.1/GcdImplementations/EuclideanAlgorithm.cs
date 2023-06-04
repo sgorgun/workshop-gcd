@@ -13,9 +13,6 @@ namespace Gcd.Version._1
         /// <param name="first">First integer.</param>
         /// <param name="second">Second integer.</param>
         /// <returns>The GCD value.</returns>
-        protected override int Func(int first, int second)
-        {
-            throw new NotImplementedException();
-        }
+        protected override int Func(int first, int second) => first == 0 ? second : this.Func(second % first, first);
     }
 }
