@@ -82,7 +82,14 @@ namespace Gcd.Version._3.Extensions
             var stopwatch = new Stopwatch();
             stopwatch.Start();
 
-            int gcd = numbers.Where(x => x != 0).Aggregate(0, (current, number) => this.algorithm.Calculate(current, number));
+            int gcd = 0;
+            foreach (int number in numbers)
+            {
+                if (number != 0)
+                {
+                    gcd = this.algorithm.Calculate(gcd, number);
+                }
+            }
 
             if (first == 0)
             {
