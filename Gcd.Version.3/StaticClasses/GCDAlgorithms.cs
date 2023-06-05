@@ -79,7 +79,7 @@ namespace Gcd.Version._3
         /// <exception cref="ArgumentException">Thrown when all numbers are 0 at the same time.</exception>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when one or more numbers are int.MinValue.</exception>
         public static int GetGcdByEuclidean(out long milliseconds, int first, int second, params int[] numbers) =>
-                        new AlgorithmProfile(new EuclideanAlgorithm()).GetGcg(out milliseconds, first, second, numbers);
+                        new AlgorithmProfile(new EuclideanAlgorithm()).CalculateGcg(out milliseconds, first, second, numbers);
 
         /// <summary>
         /// Calculates GCD of two integers [-int.MaxValue;int.MaxValue] by the Stein algorithm.
@@ -152,7 +152,7 @@ namespace Gcd.Version._3
         /// <exception cref="ArgumentException">Thrown when all numbers are 0 at the same time.</exception>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when one or more numbers are int.MinValue.</exception>
         public static int GetGcdByStein(out long milliseconds, int first, int second, params int[] numbers) =>
-            new AlgorithmProfile(new SteinAlgorithm()).GetGcg(out milliseconds, first, second, numbers);
+            new AlgorithmProfile(new SteinAlgorithm()).CalculateGcg(out milliseconds, first, second, numbers);
 
         private static int CalculateGcd(this AlgorithmProfile algorithm, out long milleseconds, int first, int second)
         {
@@ -168,7 +168,7 @@ namespace Gcd.Version._3
             return gcd;
         }
 
-        private static int GetGcg(this AlgorithmProfile algorithm, out long milleseconds, int first, int second, params int[] numbers)
+        private static int CalculateGcg(this AlgorithmProfile algorithm, out long milleseconds, int first, int second, params int[] numbers)
         {
             int gcd = algorithm.Calculate(first, second, numbers);
             milleseconds = algorithm.Milliseconds;
